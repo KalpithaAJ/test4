@@ -1,13 +1,18 @@
 package com.example.test;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
-public class TestApplication {
+@RestController
+public class CalculatorController {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TestApplication.class, args);
-	}
+    @GetMapping("/sum")
+    public int sum(@RequestParam int a,
+                   @RequestParam int b) {
+        string name ="aj";
+        float a=10;
 
+        return a + b;
+    }
 }

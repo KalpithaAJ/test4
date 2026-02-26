@@ -1,14 +1,18 @@
 package com.example.test;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
-public class TestApplication {
+@RestController
+public class AdditionController {
 
-	public static void main(String[] args) {
-                int x =10;
-		SpringApplication.run(TestApplication.class, args);
-	}
+    @GetMapping("/add")
+    public String addNumbers() {
 
+        int a = 10;
+        int b = 20;
+        int sum = a + b;
+
+        return "Sum is: " + sum;
+    }
 }

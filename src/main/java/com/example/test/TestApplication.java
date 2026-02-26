@@ -10,6 +10,7 @@ public class CalculatorController {
     @GetMapping("/sum")
     public int sum(@RequestParam int a,
                    @RequestParam int b) {
+        string name ="aj";
         float a=10;
 
         return a + b;

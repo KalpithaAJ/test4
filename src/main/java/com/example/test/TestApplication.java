@@ -1,18 +1,16 @@
 package com.example.test;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AdditionController {
+public class CalculatorController {
 
-    @GetMapping("/add")
-    public String addNumbers() {
+    @GetMapping("/sum")
+    public int sum(@RequestParam int a,
+                   @RequestParam int b) {
 
-        int a = 10;
-        int b = 20;
-        int sum = a + b;
-
-        return "Sum is: " + sum;
+        return a + b;
     }
 }
